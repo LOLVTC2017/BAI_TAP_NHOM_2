@@ -118,5 +118,20 @@ namespace WindowsFormsApp13
         {
 
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Add_customer customer = new Add_customer();
+            customer.Show();
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32( cbx_username.SelectedValue);
+            user_data pass_data = new user_data();
+            Edit_Customer form = new Edit_Customer(pass_data.edit_selected_customer(id));
+            form.Show();      
+            
+        }
     }
 }

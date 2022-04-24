@@ -16,7 +16,7 @@ namespace WindowsFormsApp13
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new client_page());
+            Application.Run(new Main_form());
         }
     }
 }
