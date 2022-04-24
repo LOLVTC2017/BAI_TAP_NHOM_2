@@ -56,6 +56,18 @@
     <Compile Include="ADMIN_FORM.Designer.cs">
       <DependentUpon>ADMIN_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="client_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_login.Designer.cs">
+      <DependentUpon>client_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_page.Designer.cs">
+      <DependentUpon>client_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ADMIN_FORM.resx">
       <DependentUpon>ADMIN_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_login.resx">
+      <DependentUpon>client_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_page.resx">
+      <DependentUpon>client_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_form.resx">
       <DependentUpon>Main_form.cs</DependentUpon>

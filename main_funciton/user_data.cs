@@ -28,5 +28,18 @@ namespace main_funciton
             adapter.Fill(dt);
             return dt;
         }
+
+        public void add_customer()
+        {
+
+        }
+        public void edit_customer()
+        {
+
+        }
+        public void delelte_customer()
+        {
+
+        }
     }
 }
