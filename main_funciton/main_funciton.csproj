@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data_connection.cs" />
+    <Compile Include="form_validate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services_data.cs" />
     <Compile Include="suplier_data.cs" />

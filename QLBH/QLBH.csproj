@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5DC188B-293B-4B3A-85BC-E922DB81AE1F}</ProjectGuid>
+    <ProjectGuid>{CA8E164D-AD75-4F4A-A3FF-5904B10BC8E6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp13</RootNamespace>
-    <AssemblyName>WindowsFormsApp13</AssemblyName>
+    <RootNamespace>QLBH</RootNamespace>
+    <AssemblyName>QLBH</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,79 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_customer.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_customer.Designer.cs">
-      <DependentUpon>Add_customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Add_suplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_suplier.Designer.cs">
-      <DependentUpon>Add_suplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ADMIN_FORM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ADMIN_FORM.Designer.cs">
-      <DependentUpon>ADMIN_FORM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="client_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="client_login.Designer.cs">
-      <DependentUpon>client_login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="client_page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="client_page.Designer.cs">
-      <DependentUpon>client_page.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Customer.Designer.cs">
-      <DependentUpon>Edit_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_suplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_suplier.Designer.cs">
-      <DependentUpon>Edit_suplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main_form.Designer.cs">
-      <DependentUpon>Main_form.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add_customer.resx">
-      <DependentUpon>Add_customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Add_suplier.resx">
-      <DependentUpon>Add_suplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ADMIN_FORM.resx">
-      <DependentUpon>ADMIN_FORM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="client_login.resx">
-      <DependentUpon>client_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="client_page.resx">
-      <DependentUpon>client_page.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Customer.resx">
-      <DependentUpon>Edit_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_suplier.resx">
-      <DependentUpon>Edit_suplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main_form.resx">
-      <DependentUpon>Main_form.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,12 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\main_funciton\main_funciton.csproj">
-      <Project>{1b102d76-6998-4ee0-8bda-dc2be8012574}</Project>
-      <Name>main_funciton</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

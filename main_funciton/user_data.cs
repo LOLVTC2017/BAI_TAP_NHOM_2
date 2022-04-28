@@ -41,17 +41,21 @@ namespace main_funciton
             commander.Parameters.AddWithValue("@UserName", UserName);
             commander.Parameters.AddWithValue("@PassWord", PassWord);
             commander.Connection.Open();
-            if(commander.ExecuteNonQuery() == 1)
+            if(commander.ExecuteNonQuery() > 0) //neu no  >1 la insert con duoi 0 la chua insert > bug con me m :)) hao z wtf see?? bitchh??  lma
             {
                 commander.Connection.Close();
                 return true;
                 
             }
-            else
+            else if (commander.ExecuteNonQuery() <0)
             {
                 commander.Connection.Close();
                 return false;
                
+            }
+            else
+            {
+                return false; 
             }
 
         }
@@ -90,8 +94,24 @@ namespace main_funciton
             }
 
         }
-        public void delelte_customer()
+        public Boolean delelte_customer(int id)
         {
+            bool delete = false;
+            string command = String.Format("DELETE_CUSTOMER {0}", id);
+            SqlCommand commander = new SqlCommand(command, connection.data_base_connect());
+            commander.Connection.Open();
+            if(commander.ExecuteNonQuery() >0)
+            {
+                commander.Connection.Close();
+                return delete = true;
+
+            }
+            else if (commander.ExecuteNonQuery() < 0)
+            {
+                commander.Connection.Close();
+                return delete = false;
+            }
+            return delete;
 
         }
     }

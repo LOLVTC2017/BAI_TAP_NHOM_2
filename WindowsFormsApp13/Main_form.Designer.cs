@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.cbx_suplier = new MaterialSkin.Controls.MaterialTabControl();
             this.page_users = new System.Windows.Forms.TabPage();
@@ -121,14 +121,14 @@
             this.grid_data1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.grid_data1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid_data1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grid_data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_data1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grid_data1.GridColor = System.Drawing.Color.WhiteSmoke;
@@ -157,6 +157,7 @@
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton3.UseAccentColor = false;
             this.materialButton3.UseVisualStyleBackColor = true;
+            this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
             // materialButton2
             // 
@@ -248,14 +249,14 @@
             this.grid_data2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.grid_data2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid_data2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_data2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_data2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grid_data2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_data2.Location = new System.Drawing.Point(6, 78);
             this.grid_data2.Name = "grid_data2";
@@ -282,6 +283,7 @@
             this.btx_delete_suplier.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btx_delete_suplier.UseAccentColor = false;
             this.btx_delete_suplier.UseVisualStyleBackColor = true;
+            this.btx_delete_suplier.Click += new System.EventHandler(this.btx_delete_suplier_Click);
             // 
             // btx_edit_suplier
             // 
@@ -302,6 +304,7 @@
             this.btx_edit_suplier.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btx_edit_suplier.UseAccentColor = false;
             this.btx_edit_suplier.UseVisualStyleBackColor = true;
+            this.btx_edit_suplier.Click += new System.EventHandler(this.btx_edit_suplier_Click);
             // 
             // btx_add_suplier
             // 
@@ -322,6 +325,7 @@
             this.btx_add_suplier.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btx_add_suplier.UseAccentColor = false;
             this.btx_add_suplier.UseVisualStyleBackColor = true;
+            this.btx_add_suplier.Click += new System.EventHandler(this.btx_add_suplier_Click);
             // 
             // cbx_suplier_name
             // 

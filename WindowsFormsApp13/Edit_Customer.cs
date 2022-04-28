@@ -18,6 +18,7 @@ namespace WindowsFormsApp13
     public partial class Edit_Customer : MaterialForm
     {
         DataTable data;
+        form_validate validate = new form_validate();
         public Edit_Customer(DataTable table)
         {
             InitializeComponent();
@@ -47,24 +48,23 @@ namespace WindowsFormsApp13
             int id = Convert.ToInt32(data.Rows[0][0]);
             user_data add_customer = new user_data();
             //check empty
-            
-            
-                if (add_customer.Update_Customer(id,FirstName, LastName, PhoneNumber, Address, UserName, Password) == true)
+           string [] array = {LastName, FirstName, Address, PhoneNumber, UserName, Password};
+
+            if (validate.CheckEmpty(array) == true)
+            {
+                if (add_customer.Update_Customer(id, FirstName, LastName, PhoneNumber, Address, UserName, Password) == true)
                 {
                     MessageBox.Show("update success");
-                    foreach (Control c in this.Controls)
-                    {
-
-                        if (c is TextBox)
-                        {
-                            ((TextBox)c).Text = String.Empty;
-                        }
-                    }
-
+                    this.Close();
                 }
                 else
+                {
+                    MessageBox.Show("update failed check your Field");
+                }
+            }
+            else if (validate.CheckEmpty(array) == false)
             {
-                MessageBox.Show("update failed check your Field");
+                MessageBox.Show("Do Not empty");
             }
                       
         }

@@ -13,5 +13,6 @@ namespace main_funciton
             SqlConnection sqlConnection = new SqlConnection("Data Source=phu;Initial Catalog=QUANLY_KHACHHANG;Integrated Security=True");
             return sqlConnection;
         }
+       
     }
 }

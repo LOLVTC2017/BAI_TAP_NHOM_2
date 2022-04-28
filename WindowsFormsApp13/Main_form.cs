@@ -20,6 +20,8 @@ namespace WindowsFormsApp13
             InitializeComponent();
         }
         user_data users_function = new user_data();
+        suplier_data suplier_function = new suplier_data();
+        services_data services_function = new services_data();  
         private void Main_form_Load(object sender, EventArgs e)
         {
             load_fucntion();
@@ -47,6 +49,30 @@ namespace WindowsFormsApp13
             cbx_username.DisplayMember = "CUSTOMER_NAME";
             cbx_username.ValueMember = "PERSONS_ID";
         }
+        private void delete_customer ()
+        {
+            int id = Convert.ToInt16(cbx_username.SelectedValue);
+
+            DialogResult dialogResult = MessageBox.Show("This Action will delele  payment and purchase history", "DELETE CUSTOMER", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+             
+
+                if (users_function.delelte_customer(id) == true)
+                {
+                    MessageBox.Show("Delete Success");
+                }
+                else if (users_function.delelte_customer(id) == false)
+                {
+                    MessageBox.Show("Delete Failed");
+                }
+                Load_user_data();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+              
+            }
+        }
 
         private void Load_grid_userdata()
         {
@@ -66,7 +92,23 @@ namespace WindowsFormsApp13
             cbx_suplier_name.DisplayMember = "SUPPLIER_NAME";
             cbx_suplier_name.ValueMember = "SUPPLIER_ID";
         }
+        private void delete_suplier()
+        {
+            int id = Convert.ToInt32(cbx_suplier_name.SelectedValue);
+            suplier_data suplier = new suplier_data();
+            DialogResult dialogResult = MessageBox.Show("This Action will delele THE SERVICES PRODUCT AND ALL PURCHASE HISTORY", "DELETE SUPLIER", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
 
+                if (suplier.delete_suplier(id) == true) { MessageBox.Show("Delete success"); load_fucntion(); }
+                else if (suplier.delete_suplier(id) == false) MessageBox.Show("delete failed");
+                Load_user_data();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
         private void Load_grid_suplier()
         {
             suplier_data suplier = new suplier_data();
@@ -132,6 +174,30 @@ namespace WindowsFormsApp13
             Edit_Customer form = new Edit_Customer(pass_data.edit_selected_customer(id));
             form.Show();      
             
+        }
+        
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            delete_customer();
+        }
+
+        private void btx_delete_suplier_Click(object sender, EventArgs e)
+        {
+            delete_suplier();
+        }
+
+        private void btx_add_suplier_Click(object sender, EventArgs e)
+        {
+            Add_suplier suplier = new Add_suplier();
+            suplier.Show();
+        }
+
+        private void btx_edit_suplier_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(cbx_suplier_name.SelectedValue);
+            suplier_data pass_data = new suplier_data();
+            Edit_suplier form = new Edit_suplier(pass_data.edit_selected_suplier(id));
+            form.Show();
         }
     }
 }
