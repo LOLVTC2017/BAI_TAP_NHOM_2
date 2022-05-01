@@ -32,11 +32,13 @@ namespace WindowsFormsApp13
             string name = txt_name.Text;
             string address = txt_address.Text;
             string number = txt_number.Text;
-            string[] array = { name, address, number };
+            string service_name = TXT_SERVICE_NAME.Text;
+            float service_price = float.Parse(TXT_SERVICE_PRICE.Text);
+            string[] array = { name, address, number, service_name, service_price.ToString()};
 
             if (validate.CheckEmpty(array) == true)
             {
-                if (suplier.add_suplier(name, address, number) == true)
+                if (suplier.add_suplier(name, address, number,service_name,service_price) == true)
                 {
                     MessageBox.Show("add success");
                     txt_name.Text = "";

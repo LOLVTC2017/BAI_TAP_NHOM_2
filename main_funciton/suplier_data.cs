@@ -30,14 +30,17 @@ namespace main_funciton
             adapter.Fill(table);
             return table;
         }
-        public Boolean add_suplier(string name ,string address,string number)
+        //THIS WILL CHANGE WHILE ADD SERVICES
+        public Boolean add_suplier(string name ,string address,string number,string service_name,float service_price)
         {
             bool add_suplier = false;
-            string command = "insert_suplier @name,@address,@number ";
+            string command = "insert_suplier @name,@address,@number,@services_name,@service_price";
             SqlCommand commander = new SqlCommand(command, database.data_base_connect());
             commander.Parameters.AddWithValue("name", name);
             commander.Parameters.AddWithValue("address", address);
             commander.Parameters.AddWithValue("number", number);
+            commander.Parameters.AddWithValue("services_name", service_name);
+            commander.Parameters.AddWithValue("service_price", service_price);
             commander.Connection.Open();
             if (commander.ExecuteNonQuery()>0)
             {
@@ -63,13 +66,15 @@ namespace main_funciton
             adapter.Fill(table);
             return table;
         }
-        public Boolean update_suplier(int id,string name, string address,string number)
+        public Boolean update_suplier(int id,string name, string address,string number,string service_name,float service_price)
         {
-            string command = "update_suplier @id,@name,@address,@number ";
+            string command = "update_suplier @id,@name,@address,@number,@services_name,@service_price ";
             SqlCommand commander = new SqlCommand(command, database.data_base_connect());
             commander.Parameters.AddWithValue("@name", name);
             commander.Parameters.AddWithValue ("@address", address);
             commander.Parameters.AddWithValue("@number", number);
+            commander.Parameters.AddWithValue("services_name", service_name);
+            commander.Parameters.AddWithValue("service_price", service_price);
             commander.Parameters.AddWithValue("@id", id);
             commander.Connection.Open();
             if (commander.ExecuteNonQuery() > 0)

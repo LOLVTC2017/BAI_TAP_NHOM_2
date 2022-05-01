@@ -27,5 +27,39 @@ namespace main_funciton
             adapter.Fill(table);
             return table;          
         }
+        public DataTable get_infor_services_change(int id)
+        {
+            string command = String.Format("get_services_infor {0}", id);
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command, database.data_base_connect());
+            adapter.Fill(table);
+            return table;
+
+        }
+        public DataTable get_persons_order(int id)
+        {
+            string command = String.Format("get_customer_buy_serives {0}", id);
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command, database.data_base_connect());
+            adapter.Fill(table);
+            return table;
+
+        }
+        public DataTable Get_Infro_suplier_not_in_services()
+        {
+            string command = ("Get_Infro_suplier_not_in_services");
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command, database.data_base_connect());
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable get_services_infor_by_id_suplier(int id)
+        {
+            string command = String.Format("get_services_infor_by_id {0}", id);
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command, database.data_base_connect());
+            adapter.Fill(table);
+            return table;
+        }
     }
 }

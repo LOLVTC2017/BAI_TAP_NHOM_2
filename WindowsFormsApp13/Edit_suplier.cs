@@ -35,10 +35,12 @@ namespace WindowsFormsApp13
             string address = txt_address.Text;
             string number = txt_number.Text;
             suplier_data SUPLIER = new suplier_data();
-            string [] array = { name, address, number }; 
-            if(validate.CheckEmpty(array)== true)
+            string service_name = TXT_SERVICE_NAME.Text;
+            float service_price = float.Parse(TXT_SERVICE_PRICE.Text);
+            string[] array = { name, address, number, service_name, service_price.ToString() };
+            if (validate.CheckEmpty(array)== true)
                 { 
-                if (SUPLIER.update_suplier(id, name, address, number) == true)
+                if (SUPLIER.update_suplier(id, name, address, number, service_name,service_price) == true)
                 {
                     MessageBox.Show("update success");
                     this.Close();
@@ -56,6 +58,11 @@ namespace WindowsFormsApp13
         }
 
         private void Edit_suplier_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_suplier_edit_Click(object sender, EventArgs e)
         {
 
         }

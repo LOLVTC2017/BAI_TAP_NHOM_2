@@ -35,6 +35,10 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_suplier_add = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.TXT_SERVICE_NAME = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.TXT_SERVICE_PRICE = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.SuspendLayout();
             // 
             // txt_address
@@ -44,7 +48,7 @@
             this.txt_address.Depth = 0;
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_address.Location = new System.Drawing.Point(141, 325);
+            this.txt_address.Location = new System.Drawing.Point(141, 315);
             this.txt_address.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(250, 39);
@@ -142,7 +146,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(25, 345);
+            this.materialLabel4.Location = new System.Drawing.Point(25, 335);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(58, 19);
@@ -153,7 +157,7 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel3.Location = new System.Drawing.Point(25, 238);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
@@ -181,7 +185,7 @@
             this.btn_suplier_add.Depth = 0;
             this.btn_suplier_add.HighEmphasis = true;
             this.btn_suplier_add.Icon = null;
-            this.btn_suplier_add.Location = new System.Drawing.Point(126, 396);
+            this.btn_suplier_add.Location = new System.Drawing.Point(141, 599);
             this.btn_suplier_add.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_suplier_add.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_suplier_add.Name = "btn_suplier_add";
@@ -194,11 +198,123 @@
             this.btn_suplier_add.UseVisualStyleBackColor = true;
             this.btn_suplier_add.Click += new System.EventHandler(this.btn_suplier_add_Click);
             // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(25, 424);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(52, 19);
+            this.materialLabel2.TabIndex = 19;
+            this.materialLabel2.Text = "Service";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(25, 519);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(99, 19);
+            this.materialLabel5.TabIndex = 21;
+            this.materialLabel5.Text = "Services Price";
+            // 
+            // TXT_SERVICE_NAME
+            // 
+            this.TXT_SERVICE_NAME.AllowPromptAsInput = true;
+            this.TXT_SERVICE_NAME.AnimateReadOnly = false;
+            this.TXT_SERVICE_NAME.AsciiOnly = false;
+            this.TXT_SERVICE_NAME.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TXT_SERVICE_NAME.BeepOnError = false;
+            this.TXT_SERVICE_NAME.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TXT_SERVICE_NAME.Depth = 0;
+            this.TXT_SERVICE_NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TXT_SERVICE_NAME.HidePromptOnLeave = false;
+            this.TXT_SERVICE_NAME.HideSelection = true;
+            this.TXT_SERVICE_NAME.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.TXT_SERVICE_NAME.LeadingIcon = null;
+            this.TXT_SERVICE_NAME.Location = new System.Drawing.Point(141, 395);
+            this.TXT_SERVICE_NAME.Mask = "";
+            this.TXT_SERVICE_NAME.MaxLength = 32767;
+            this.TXT_SERVICE_NAME.MouseState = MaterialSkin.MouseState.OUT;
+            this.TXT_SERVICE_NAME.Name = "TXT_SERVICE_NAME";
+            this.TXT_SERVICE_NAME.PasswordChar = '\0';
+            this.TXT_SERVICE_NAME.PrefixSuffixText = null;
+            this.TXT_SERVICE_NAME.PromptChar = '_';
+            this.TXT_SERVICE_NAME.ReadOnly = false;
+            this.TXT_SERVICE_NAME.RejectInputOnFirstFailure = false;
+            this.TXT_SERVICE_NAME.ResetOnPrompt = true;
+            this.TXT_SERVICE_NAME.ResetOnSpace = true;
+            this.TXT_SERVICE_NAME.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TXT_SERVICE_NAME.SelectedText = "";
+            this.TXT_SERVICE_NAME.SelectionLength = 0;
+            this.TXT_SERVICE_NAME.SelectionStart = 0;
+            this.TXT_SERVICE_NAME.ShortcutsEnabled = true;
+            this.TXT_SERVICE_NAME.Size = new System.Drawing.Size(250, 48);
+            this.TXT_SERVICE_NAME.SkipLiterals = true;
+            this.TXT_SERVICE_NAME.TabIndex = 23;
+            this.TXT_SERVICE_NAME.TabStop = false;
+            this.TXT_SERVICE_NAME.Text = " ";
+            this.TXT_SERVICE_NAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TXT_SERVICE_NAME.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TXT_SERVICE_NAME.TrailingIcon = null;
+            this.TXT_SERVICE_NAME.UseSystemPasswordChar = false;
+            this.TXT_SERVICE_NAME.ValidatingType = null;
+            // 
+            // TXT_SERVICE_PRICE
+            // 
+            this.TXT_SERVICE_PRICE.AllowPromptAsInput = true;
+            this.TXT_SERVICE_PRICE.AnimateReadOnly = false;
+            this.TXT_SERVICE_PRICE.AsciiOnly = false;
+            this.TXT_SERVICE_PRICE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TXT_SERVICE_PRICE.BeepOnError = false;
+            this.TXT_SERVICE_PRICE.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TXT_SERVICE_PRICE.Depth = 0;
+            this.TXT_SERVICE_PRICE.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TXT_SERVICE_PRICE.HidePromptOnLeave = false;
+            this.TXT_SERVICE_PRICE.HideSelection = true;
+            this.TXT_SERVICE_PRICE.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.TXT_SERVICE_PRICE.LeadingIcon = null;
+            this.TXT_SERVICE_PRICE.Location = new System.Drawing.Point(141, 490);
+            this.TXT_SERVICE_PRICE.Mask = "";
+            this.TXT_SERVICE_PRICE.MaxLength = 32767;
+            this.TXT_SERVICE_PRICE.MouseState = MaterialSkin.MouseState.OUT;
+            this.TXT_SERVICE_PRICE.Name = "TXT_SERVICE_PRICE";
+            this.TXT_SERVICE_PRICE.PasswordChar = '\0';
+            this.TXT_SERVICE_PRICE.PrefixSuffixText = null;
+            this.TXT_SERVICE_PRICE.PromptChar = '_';
+            this.TXT_SERVICE_PRICE.ReadOnly = false;
+            this.TXT_SERVICE_PRICE.RejectInputOnFirstFailure = false;
+            this.TXT_SERVICE_PRICE.ResetOnPrompt = true;
+            this.TXT_SERVICE_PRICE.ResetOnSpace = true;
+            this.TXT_SERVICE_PRICE.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TXT_SERVICE_PRICE.SelectedText = "";
+            this.TXT_SERVICE_PRICE.SelectionLength = 0;
+            this.TXT_SERVICE_PRICE.SelectionStart = 0;
+            this.TXT_SERVICE_PRICE.ShortcutsEnabled = true;
+            this.TXT_SERVICE_PRICE.Size = new System.Drawing.Size(250, 48);
+            this.TXT_SERVICE_PRICE.SkipLiterals = true;
+            this.TXT_SERVICE_PRICE.TabIndex = 24;
+            this.TXT_SERVICE_PRICE.TabStop = false;
+            this.TXT_SERVICE_PRICE.Text = " ";
+            this.TXT_SERVICE_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TXT_SERVICE_PRICE.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TXT_SERVICE_PRICE.TrailingIcon = null;
+            this.TXT_SERVICE_PRICE.UseSystemPasswordChar = false;
+            this.TXT_SERVICE_PRICE.ValidatingType = null;
+            // 
             // Add_suplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 502);
+            this.ClientSize = new System.Drawing.Size(416, 705);
+            this.Controls.Add(this.TXT_SERVICE_PRICE);
+            this.Controls.Add(this.TXT_SERVICE_NAME);
+            this.Controls.Add(this.materialLabel5);
+            this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.btn_suplier_add);
             this.Controls.Add(this.txt_address);
             this.Controls.Add(this.txt_number);
@@ -223,5 +339,9 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton btn_suplier_add;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialMaskedTextBox TXT_SERVICE_NAME;
+        private MaterialSkin.Controls.MaterialMaskedTextBox TXT_SERVICE_PRICE;
     }
 }
