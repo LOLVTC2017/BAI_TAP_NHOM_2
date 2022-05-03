@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cbx_suplier = new MaterialSkin.Controls.MaterialTabControl();
             this.page_users = new System.Windows.Forms.TabPage();
             this.grid_data1 = new System.Windows.Forms.DataGridView();
@@ -70,8 +71,13 @@
             this.txt_total_all_payment = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.grid_data_3 = new System.Windows.Forms.DataGridView();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.sERVICESTableAdapter = new WindowsFormsApp13.QUANLY_KHACHHANGDataSetTableAdapters.SERVICESTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.qUANLY_KHACHHANGDataSet3 = new WindowsFormsApp13.QUANLY_KHACHHANGDataSet3();
+            this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportTableAdapter = new WindowsFormsApp13.QUANLY_KHACHHANGDataSet3TableAdapters.reportTableAdapter();
             this.cbx_suplier.SuspendLayout();
             this.page_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_data1)).BeginInit();
@@ -86,6 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.sERVICESBindingSource1)).BeginInit();
             this.page_history.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_data_3)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_KHACHHANGDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbx_suplier
@@ -94,6 +103,7 @@
             this.cbx_suplier.Controls.Add(this.page_supplier);
             this.cbx_suplier.Controls.Add(this.page_services);
             this.cbx_suplier.Controls.Add(this.page_history);
+            this.cbx_suplier.Controls.Add(this.tabPage1);
             this.cbx_suplier.Depth = 0;
             this.cbx_suplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbx_suplier.ImageList = this.imageList2;
@@ -701,6 +711,17 @@
             this.materialLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.materialLabel12.Click += new System.EventHandler(this.materialLabel12_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.ImageKey = "3094851.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 53);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(985, 497);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Report";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // imageList2
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
@@ -710,10 +731,38 @@
             this.imageList2.Images.SetKeyName(2, "3632552.png");
             this.imageList2.Images.SetKeyName(3, "1924785.png");
             this.imageList2.Images.SetKeyName(4, "1144760.png");
+            this.imageList2.Images.SetKeyName(5, "3094851.png");
             // 
             // sERVICESTableAdapter
             // 
             this.sERVICESTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.reportBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp13.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(985, 497);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // qUANLY_KHACHHANGDataSet3
+            // 
+            this.qUANLY_KHACHHANGDataSet3.DataSetName = "QUANLY_KHACHHANGDataSet3";
+            this.qUANLY_KHACHHANGDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportBindingSource
+            // 
+            this.reportBindingSource.DataMember = "report";
+            this.reportBindingSource.DataSource = this.qUANLY_KHACHHANGDataSet3;
+            // 
+            // reportTableAdapter
+            // 
+            this.reportTableAdapter.ClearBeforeFill = true;
             // 
             // Main_form
             // 
@@ -740,6 +789,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.sERVICESBindingSource1)).EndInit();
             this.page_history.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_data_3)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_KHACHHANGDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -786,6 +838,11 @@
         private QUANLY_KHACHHANGDataSetTableAdapters.SERVICESTableAdapter sERVICESTableAdapter;
         private System.Windows.Forms.BindingSource sERVICESBindingSource1;
         private MaterialSkin.Controls.MaterialMaskedTextBox txt_total_all_payment;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private QUANLY_KHACHHANGDataSet3 qUANLY_KHACHHANGDataSet3;
+        private System.Windows.Forms.BindingSource reportBindingSource;
+        private QUANLY_KHACHHANGDataSet3TableAdapters.reportTableAdapter reportTableAdapter;
     }
 }
 

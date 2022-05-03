@@ -25,11 +25,14 @@ namespace WindowsFormsApp13
         history_data data = new history_data();
         private void Main_form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qUANLY_KHACHHANGDataSet3.report' table. You can move, or remove it, as needed.
+            this.reportTableAdapter.Fill(this.qUANLY_KHACHHANGDataSet3.report);
             // TODO: This line of code loads data into the 'qUANLY_KHACHHANGDataSet.SERVICES' table. You can move, or remove it, as needed.
             this.sERVICESTableAdapter.Fill(this.qUANLY_KHACHHANGDataSet.SERVICES);
             // TODO: This line of code loads data into the 'qUANLY_KHACHHANGDataSet.SERVICES' table. You can move, or remove it, as needed.
             this.sERVICESTableAdapter.Fill(this.qUANLY_KHACHHANGDataSet.SERVICES);
             load_fucntion();
+            this.reportViewer1.RefreshReport();
         }
         //THIS LOAD_FUNCTION GROUP ALL FUNCTION NEED TO RUN WITH FORM LOAD 
         private void load_fucntion ()
